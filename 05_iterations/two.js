@@ -6,7 +6,7 @@ while(i<=10){
     i=i+2;
 }
 
-let arr = ["Spiderman","Thor","Ironman"];
+let arr = ["Spider-man","Thor","Iron-man"];
 let a=0;
 while(a<arr.length){
     // console.log(arr[a]);
