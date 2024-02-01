@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS|Events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <div class="container">
+        <ul id="images">
+            <li><img src="https://images.pexels.com/photos/326502/pexels-photo-326502.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" id="photoshop" width="200px" alt=""></li>
+            <li><img src="https://images.pexels.com/photos/402028/pexels-photo-402028.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" width="200px" id="japan" alt=""></li>
+            <li><img src="https://images.pexels.com/photos/709552/pexels-photo-709552.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" width="200px" id="river" alt=""></li>
+            <li><img src="https://images.pexels.com/photos/53977/eagle-owl-raptor-falconry-owl-53977.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" width="200px" id="owl" alt=""></li>
+            <li><img src="https://images.pexels.com/photos/2927676/pexels-photo-2927676.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" width="200px" id="prayer" alt=""></li>
+            <li><a href="https://www.google.com" id="google" style="color: aliceblue;">Google</a></li>
+        </ul>
+    </div>
+    <script>
+        // document.getElementById('owl').onclick = function(){
+        //     alert("Owl Clicked")
+        // }
+
+        // attachEvent()
+        // jQuery
+
+          //   read-> 
+        // type, timestamp, defaultPrevented
+        // target, toElement, srcElement, currentTarget
+        // clintX, clintY, screenX, screenY
+        // altKey, ctrlKey, shiftKey, keyCode
+
+        // document.getElementById('owl').addEventListener('click', function (e) {
+        //     // alert('Owl clicked again')
+        //     console.log(e);
+        //   },false)
+      
+        // bubbling phases -> defaluts -> false #child to parent(down to up)
+
+        // document.getElementById('images').addEventListener('click', function (e) {
+        //     console.log('clicked inside ul');
+        //   },false)
+        // document.getElementById('owl').addEventListener('click', function (e) {
+        //     console.log('Owl clicked');
+                // e.stopPropagation()
+        //   },false) 
+
+        //captcha phases -> true #parents to child(up to down)
+
+        // document.getElementById('images').addEventListener('click', function (e) {
+        //     console.log('clicked inside ul');
+        //   },true)
+        // document.getElementById('owl').addEventListener('click', function (e) {
+        //     console.log('Owl clicked');
+        //   },true)
+      
+          document.getElementById('google').addEventListener('click',function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Google clicked')
+            },false)
+
+        // document.querySelector('#images').addEventListener('click', function(e){
+        //     console.log(e.target.tagName);
+        //     if (e.target.tagName === 'IMG') {
+        //         console.log(e.target.id);
+        //         let removeIt = e.target.parentNode;
+        //         removeIt.remove();
+                
+        //     }
+
+        // })
+    </script>
+</body>
+</html>
